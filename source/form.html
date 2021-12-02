@@ -39,11 +39,11 @@
                 </div>
                 <div class="fields__block">
                   <label class="fields__block-label" for="weight">Вес (кг):*</label>
-                  <input class="fields__block-textfield" type="text" id="weight" name="weight" placeholder="7">
+                  <input class="fields__block-textfield" type="number" id="weight" name="weight" placeholder="7">
                 </div>
                 <div class="fields__block">
                   <label class="fields__block-label" for="age">Возраст (лет):</label>
-                  <input class="fields__block-textfield" type="text" id="age" name="age" placeholder="7">
+                  <input class="fields__block-textfield" type="number" id="age" name="age" placeholder="7">
                 </div>
               </fieldset>
               <fieldset class="fields__group fields__group--program">
@@ -69,9 +69,9 @@
                 </ul>
               </fieldset>
               <fieldset class="fields__group fields__group--contacts">
-                <div class="fields__head">
+                <legend class="fields__head">
                   <h2 class="fields__head-title">Контактные данные (владельца кота)</h2>
-                </div>
+                </legend>
                 <div class="fields__block">
                   <label class="fields__block-label" for="email">E-mail:*</label>
                   <input class="fields__block-textfield" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
@@ -88,9 +88,9 @@
                 </div>
               </fieldset>
               <fieldset class="fields__group fields__group--comment">
-                <div class="fields__head">
+                <legend class="fields__head">
                   <h2 class="fields__head-title">Комментарий</h2>
-                </div>
+                </legend>
                 <textarea class="fields__textarea" name="additional" placeholder="Расскажите обо всех повадках кота"></textarea>
               </fieldset>
               <fieldset class="fields__group fields__group--add">
@@ -124,9 +124,9 @@
                   </li>
                 </ul>
               </fieldset>
-              <div class="form__button">
-                <button class="button form__button" type="submit">Отправить заявку</button>
-                <span class="form__button-notes">* — Обязательные поля</span>
+              <div class="send">
+                <button class="button send__form" type="submit">Отправить заявку</button>
+                <span class="send__notes">* — Обязательные поля</span>
               </div>
             </div>
           </form>
