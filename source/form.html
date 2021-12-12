@@ -3,21 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="/source/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип Кэт энерджи.">
-        <img class="page-header__logo-title" src="img/logo-mobile-title.svg" width="101" height="18" alt="Надпись Кэт энерджи.">
+        <svg class="page-header__logo-image" width="33" height="38">
+          <use xlink:href="img/sprite.svg#logo-image"></use>
+        </svg>
+        <svg class="page-header__logo-title" width="101" height="18">
+          <use xlink:href="img/sprite.svg#logo-mobile-title"></use>
+        </svg>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__container">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active"><a href="#">Главная</a></li>
-            <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-            <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+            <li class="site-list__item"><a class="site-list__item-link" href="#">Главная</a></li>
+            <li class="site-list__item"><a class="site-list__item-link" href="catalog.html">Каталог продукции</a></li>
+            <li class="site-list__item site-list__item--active"><a class="site-list__item-link" href="form.html">Подбор программы</a></li>
           </ul>
         </div>
       </nav>
@@ -120,7 +124,7 @@
                 </ul>
               </fieldset>
               <div class="send">
-                <button class="button send__form" type="submit">Отправить заявку</button>
+                <button class="button button__send" type="submit">Отправить заявку</button>
                 <span class="send__notes">* — Обязательные поля</span>
               </div>
             </div>
@@ -130,7 +134,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__container">
+      <div class="page-footer__container-form">
         <section class="page-footer__cooperation">
           <div class="page-footer__cooperation-container contacts">
             <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>

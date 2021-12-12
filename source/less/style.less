@@ -1,8 +1,67 @@
 // Начните писать стили здесь
-@import "/source/less/global/fonts.less";
-@import "/source/less/global/variables.less";
+// общие стили
+@import "button.less";
+@import "grid.less";
+// стили для главной страницы вместе с header и footer
+@import "global/fonts.less";
+@import "global/variables.less";
+@import "page/page.less";
+@import "page/page-header.less";
+@import "page/page-main.less";
+@import "index/preview-caption.less";
+@import "index/preview.less";
+@import "index/progress-bar.less";
+@import "index/promo-list.less";
+@import "index/promo.less";
+@import "index/site-list.less";
+@import "index/social.less";
+@import "index/adress.less";
+@import "index/contacts.less";
+@import "index/copyright.less";
+@import "index/instruction.less";
+@import "index/location.less";
+@import "index/main-nav.less";
+@import "page/page-footer.less";
+// стили для каталога
+@import "page/page-catalog.less";
+@import "catalog/catalog.less";
+@import "catalog/product.less";
+@import "catalog/product-table.less";
+@import "catalog/add-product.less";
+@import "catalog/add-catalog.less";
+// стили для формы
+@import "page/page-form.less";
+@import "form/form-head.less";
+@import "form/selection.less";
+@import "form/fields.less";
+@import "form/programm-type-list";
+@import "form/send.less";
+@import "form/add-list.less";
+@import "form/send.less";
 
-body {
-  font-family: @deafult-fonts;
-  background-color: rgba(255, 255, 255, 1);
+a {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
 }
