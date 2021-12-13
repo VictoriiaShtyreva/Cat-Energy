@@ -2,12 +2,14 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header page-header__container">
-      <a class="page-header__logo" href="index.html">
+    <header class="page-header">
+      <div class="page-header__container">
+        <a class="page-header__logo" href="index.html">
         <svg class="page-header__logo-image" width="33" height="38">
           <use xlink:href="img/sprite.svg#logo-image"></use>
         </svg>
@@ -15,8 +17,9 @@
           <use xlink:href="img/sprite.svg#logo-mobile-title"></use>
         </svg>
       </a>
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__container">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active"><a class="site-list__item-link" href="index.html">Главная</a></li>
@@ -35,7 +38,7 @@
             <p class="promo__caption">Функциональное питание для котов</p>
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
             <img class="promo_image" src="img/index-can-mobile.png" width="280" height="270" alt="Промо картинка товара функционального питания для котов Кэт энерджи.">
-            <a class="button button__promo" href="form.html">Подобрать программу</a>
+            <a class="button button--promo" href="form.html">Подобрать программу</a>
           </header>
           <aside class="promo-list">
             <div class="promo-list__container">
@@ -117,7 +120,7 @@
     <footer class="page-footer">
       <div class="page-footer__container">
         <section class="page-footer__cooperation">
-          <div class="page-footer__cooperation-container contacts">
+          <div class="page-footer__cooperation contacts">
             <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
             <div class="contacts__text adress">
               <p class="adress__street">ул. Большая Конюшенная, д. 19/8</p>

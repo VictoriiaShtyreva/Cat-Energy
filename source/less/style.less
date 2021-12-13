@@ -1,67 +1,41 @@
 // Начните писать стили здесь
 // общие стили
-@import "button.less";
-@import "grid.less";
-// стили для главной страницы вместе с header и footer
+@import "blocks/button.less";
+@import "blocks/grid.less";
 @import "global/fonts.less";
 @import "global/variables.less";
-@import "page/page.less";
-@import "page/page-header.less";
-@import "page/page-main.less";
-@import "index/preview-caption.less";
-@import "index/preview.less";
-@import "index/progress-bar.less";
-@import "index/promo-list.less";
-@import "index/promo.less";
-@import "index/site-list.less";
-@import "index/social.less";
-@import "index/adress.less";
-@import "index/contacts.less";
-@import "index/copyright.less";
-@import "index/instruction.less";
-@import "index/location.less";
-@import "index/main-nav.less";
-@import "page/page-footer.less";
+@import "global/global.less";
+// стили для главной страницы вместе с header и footer
+@import "blocks/page.less";
+@import "blocks/page-header.less";
+@import "blocks/page-main.less";
+@import "blocks/preview-caption.less";
+@import "blocks/preview.less";
+@import "blocks/progress-bar.less";
+@import "blocks/promo-list.less";
+@import "blocks/promo.less";
+@import "blocks/site-list.less";
+@import "blocks/social.less";
+@import "blocks/adress.less";
+@import "blocks/contacts.less";
+@import "blocks/copyright.less";
+@import "blocks/instruction.less";
+@import "blocks/location.less";
+@import "blocks/main-nav.less";
+@import "blocks/page-footer.less";
 // стили для каталога
-@import "page/page-catalog.less";
-@import "catalog/catalog.less";
-@import "catalog/product.less";
-@import "catalog/product-table.less";
-@import "catalog/add-product.less";
-@import "catalog/add-catalog.less";
+@import "blocks/page-catalog.less";
+@import "blocks/catalog.less";
+@import "blocks/catalog-products.less";
+@import "blocks/product.less";
+@import "blocks/product-table.less";
+@import "blocks/add-product.less";
+@import "blocks/add-catalog.less";
 // стили для формы
-@import "page/page-form.less";
-@import "form/form-head.less";
-@import "form/selection.less";
-@import "form/fields.less";
-@import "form/programm-type-list";
-@import "form/send.less";
-@import "form/add-list.less";
-@import "form/send.less";
-
-a {
-  display: block;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-ul {
-  list-style: none;
-}
+@import "blocks/page-form.less";
+@import "blocks/form-head.less";
+@import "blocks/selection.less";
+@import "blocks/fields.less";
+@import "blocks/program-type-list";
+@import "blocks/send.less";
+@import "blocks/add-list.less";
