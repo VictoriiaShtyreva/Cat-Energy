@@ -1,4 +1,21 @@
-/* stylelint-disable */
+.social__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+.social__item {
+  text-align: center;
+}
+
 .social__link {
   color: @special-grey-2;
 }

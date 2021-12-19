@@ -1,0 +1,19 @@
+.grid-instruction {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 154px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 37px 77px;
+  }
+}
+
+.grid-instruction__item {
+  @media (min-width: @tablet-width) {
+    width: 40%;
+    max-width: 280px;
+  }
+}
