@@ -1,13 +1,12 @@
 /* stylelint-disable */
 .page-header{
-  font-style: normal;
-  font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
   color: @black;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid @border;
 }
 
 @media (min-width: @tablet-width) {
@@ -21,20 +20,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-top: 11px;
   padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
     padding-top: 24px;
     padding-bottom: 62px;
   }
   @media (min-width: @desktop-width) {
-    padding-left: 110px;
-    padding-right: 110px;
     padding-top: 53px;
     padding-bottom: 32px;
   }
