@@ -1,8 +1,8 @@
-/* stylelint-disable */
 .button {
+  font-family: @deafult-font;
   font-size: 16px;
   line-height: 20px;
-  display: inline-block;
+  display: block;
   text-transform: uppercase;
   text-align: center;
   color: @white;
@@ -16,18 +16,49 @@
     font-size: 14px;
     line-height: 18px;
 
-    @media (min-width: @tablet-width)  {
+    @media (min-width: @tablet-width) {
+      display: inline-block;
       font-size: 20px;
       width: auto;
       padding: 14px 26px;
     }
   }
+
   &--product {
     padding: 10px 109px;
   }
+
   &--product-extra {
     color: @special-grey;
     background-color: @basic-grey;
     padding: 10px 94px;
+  }
+
+  &--send {
+    width: 100%;
+    margin-bottom: 21px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      width: 282px;
+      padding: 13px 45px;
+      margin-right: 61px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 568px;
+      margin-right: 82px;
+    }
+  }
+
+  &--add-product {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+    }
+
+    @media (min-width: @desktop-width) {
+      max-width: 244px;
+    }
   }
 }
