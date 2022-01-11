@@ -1,21 +1,18 @@
 .fields {
-  @media (min-width: @tablet-width) {
-    padding: 6px 35px 72px 40px;
-  }
-
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 82px;
+    display: grid;
+    grid-template-areas:
+      "personal program"
+      "contacts contacts"
+      "comment comment"
+      "add add"
+      "send send";
   }
 }
 
 .fields__group {
   padding: 0;
+  margin: 0;
   border: none;
 }
 // форма с персональными данными
@@ -28,8 +25,8 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 41px;
-    width: 50%;
     max-width: 569px;
+    grid-area: personal;
   }
 }
 // форма с выбором программ
@@ -54,8 +51,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
     max-width: 568px;
+    grid-area: program;
   }
 }
 // общая часть форм
@@ -154,6 +151,10 @@
 // форма с контактными данными владельца
 .fields__group--contacts {
   padding-top: 6px;
+
+  @media (min-width: @desktop-width) {
+    grid-area: contacts;
+  }
 }
 
 .fields__inner {
@@ -168,13 +169,16 @@
 
 .fields__inner .fields__block {
   @media (min-width: @desktop-width) {
-    width: 50%;
     min-width: 569px;
   }
 }
 // форма с коменнтариями
 .fields__group--comment {
   padding-bottom: 6px;
+
+  @media (min-width: @desktop-width) {
+    grid-area: comment;
+  }
 }
 
 .fields__textarea {
@@ -192,11 +196,11 @@
   margin-top: 38px;
   resize: none;
   overflow: auto;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     line-height: 30px;
     height: 174px;
-    margin-top: 37px;
     padding: 10px 19px;
   }
 
@@ -205,3 +209,8 @@
   }
 }
 // форма с дополнительными возможностями
+.fields__group--add {
+  @media (min-width: @desktop-width) {
+    grid-area: add;
+  }
+}

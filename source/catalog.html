@@ -8,27 +8,25 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="container">
-        <div class="page-header__container">
-          <a class="page-header__logo" href="index.html">
-            <svg class="page-header__logo-image" width="33" height="38">
-              <use xlink:href="img/sprite.svg#logo-image"></use>
-            </svg>
-          </a>
-          <svg class="page-header__logo-title" width="101" height="18">
-            <use xlink:href="img/sprite.svg#logo-mobile-title"></use>
+      <div class="container page-header__container">
+        <a class="page-header__logo" href="index.html">
+          <svg class="page-header__logo-image" width="33" height="38">
+            <use xlink:href="img/sprite.svg#logo-image"></use>
           </svg>
-          <button class="page-header__toggle page-header__toggle--active" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <nav class="main-nav main-nav--open">
-            <div class="main-nav__container">
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__item-link" href="index.html">Главная</a></li>
-                <li class="main-nav__item  main-nav__item--active"><a class="main-nav__item-link" href="catalog.html">Каталог продукции</a></li>
-                <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Подбор программы</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+        </a>
+        <svg class="page-header__logo-title" width="101" height="18">
+          <use xlink:href="img/sprite.svg#logo-mobile-title"></use>
+        </svg>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <div class="main-nav__container">
+            <ul class="main-nav__list">
+              <li class="main-nav__item  main-nav__item--active"><a class="main-nav__item-link" href="index.html">Главная</a></li>
+              <li class="main-nav__item"><a class="main-nav__item-link" href="catalog.html">Каталог продукции</a></li>
+              <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Подбор программы</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
     <main class="page-catalog">
@@ -212,7 +210,7 @@
                 </div>
                 <a class="button button--product" href="#">Заказать</a>
               </li>
-              <li class="product__add">
+              <li class="product__item product__item--add">
                 <div class="product__extra">
                   <svg class="product__extra-icon" width="30" height="30">
                     <use xlink:href="img/sprite.svg#icon-plus"></use>
@@ -226,57 +224,55 @@
           </div>
         </section>
         <section class="add-catalog">
-          <div class="container">
-            <h2 class="add-catalog__title">Дополнительные товары</h2>
-            <div class="add-catalog__container">
-              <ul class="add-catalog__list add-product">
-                <li class="add-product__item">
-                  <h3 class="add-product__title">Сахарозаменитель</h3>
-                  <table class="add-product__option">
-                    <tr class="add-product__table">
-                      <td class="add-product__table-cell add-product__table-cell--quantity">1 Упаковка (100 г)</td>
-                      <td class="add-product__table-cell add-product__table-cell--price">200 Р.</td>
-                    </tr>
-                  </table>
-                  <a class="button button--add-product" href="#">Заказать</a>
-                </li>
-                <li class="add-product__item">
-                  <h3 class="add-product__title">Питьевая вода</h3>
-                  <table class="add-product__option">
-                    <tr class="add-product__table">
-                      <td class="add-product__table-cell add-product__table-cell--quantity">5 литров</td>
-                      <td class="add-product__table-cell add-product__table-cell--price">50 Р.</td>
-                    </tr>
-                  </table>
-                  <a class="button button--add-product" href="#">Заказать</a>
-                </li>
-                <li class="add-product__item">
-                  <h3 class="add-product__title">Молоко</h3>
-                  <table class="add-product__option">
-                    <tr class="add-product__table">
-                      <td class="add-product__table-cell add-product__table-cell--quantity">1 литр</td>
-                      <td class="add-product__table-cell add-product__table-cell--price">100 Р.</td>
-                    </tr>
-                  </table>
-                  <a class="button button--add-product" href="#">Заказать</a>
-                </li>
-                <li class="add-product__item">
-                  <h3 class="add-product__title">Витамины</h3>
-                  <table class="add-product__option">
-                    <tr class="add-product__table">
-                      <td class="add-product__table-cell add-product__table-cell--quantity">1 Упаковка (30 г)</td>
-                      <td class="add-product__table-cell add-product__table-cell--price">300 Р.</td>
-                    </tr>
-                  </table>
-                  <a class="button button--add-product" href="#">Заказать</a>
-                </li>
-              </ul>
-              <div class="add-catalog__promo">
-                <svg class="add-catalog__icon-gift" width="78" height="80">
-                  <use xlink:href="img/sprite.svg#icon-gift"></use>
-                </svg>
-                <p class="add-catalog__promo-text">Закажите все и получите чехол для кота в подарок!</p>
-              </div>
+          <h2 class="add-catalog__title">Дополнительные товары</h2>
+          <div class="add-catalog__container">
+            <ul class="add-catalog__list add-product">
+              <li class="add-product__item">
+                <h3 class="add-product__title">Сахарозаменитель</h3>
+                <table class="add-product__option">
+                  <tr class="add-product__table">
+                    <td class="add-product__table-cell add-product__table-cell--quantity">1 Упаковка (100 г)</td>
+                    <td class="add-product__table-cell add-product__table-cell--price">200 Р.</td>
+                  </tr>
+                </table>
+                <a class="button button--add-product" href="#">Заказать</a>
+              </li>
+              <li class="add-product__item">
+                <h3 class="add-product__title">Питьевая вода</h3>
+                <table class="add-product__option">
+                  <tr class="add-product__table">
+                    <td class="add-product__table-cell add-product__table-cell--quantity">5 литров</td>
+                    <td class="add-product__table-cell add-product__table-cell--price">50 Р.</td>
+                  </tr>
+                </table>
+                <a class="button button--add-product" href="#">Заказать</a>
+              </li>
+              <li class="add-product__item">
+                <h3 class="add-product__title">Молоко</h3>
+                <table class="add-product__option">
+                  <tr class="add-product__table">
+                    <td class="add-product__table-cell add-product__table-cell--quantity">1 литр</td>
+                    <td class="add-product__table-cell add-product__table-cell--price">100 Р.</td>
+                  </tr>
+                </table>
+                <a class="button button--add-product" href="#">Заказать</a>
+              </li>
+              <li class="add-product__item">
+                <h3 class="add-product__title">Витамины</h3>
+                <table class="add-product__option">
+                  <tr class="add-product__table">
+                    <td class="add-product__table-cell add-product__table-cell--quantity">1 Упаковка (30 г)</td>
+                    <td class="add-product__table-cell add-product__table-cell--price">300 Р.</td>
+                  </tr>
+                </table>
+                <a class="button button--add-product" href="#">Заказать</a>
+              </li>
+            </ul>
+            <div class="add-catalog__promo">
+              <svg class="add-catalog__icon-gift" width="78" height="80">
+                <use xlink:href="img/sprite.svg#icon-gift"></use>
+              </svg>
+              <p class="add-catalog__promo-text">Закажите все и получите чехол для кота в подарок!</p>
             </div>
           </div>
         </section>

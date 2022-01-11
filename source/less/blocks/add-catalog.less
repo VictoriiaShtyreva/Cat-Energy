@@ -16,13 +16,22 @@
 
 .add-catalog__list {
   border-top: 1px solid @form-grey--ligth;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    min-width: 896px;
+  }
 }
 
 .add-catalog__container {
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 79px;
   }
 }
 
@@ -43,12 +52,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 25%;
-    flex: 0 0 25%;
-    min-height: 289px;
-    padding-right: 40px;
-    padding-left: 40px;
     flex-direction: column;
+    width: 30%;
+    margin: 0;
   }
 
   &::after {

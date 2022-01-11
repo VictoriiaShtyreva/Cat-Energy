@@ -25,7 +25,14 @@
   }
 
   &--product {
-    padding: 10px 109px;
+    @media (min-width: @tablet-width) {
+      min-width: 248px;
+      padding: 10px 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 168px;
+    }
   }
 
   &--product-extra {
