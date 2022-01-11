@@ -1,24 +1,92 @@
-/* stylelint-disable */
-.add-product {
-    margin: 0;
-    padding: 0;
+.add-product__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid @form-grey--ligth;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 38px;
+    border: 1px solid @form-grey--ligth;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 16px 0;
+    border: none;
+    border-top: 1px solid @form-grey--ligth;
+    border-bottom: 1px solid @form-grey--ligth;
+  }
 }
-.add-product__item  {
-    margin-bottom: 31px;
+
+.add-product__title {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  color: @special-grey--dark;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 25px;
+    width: 30%;
+    min-width: 163px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 20%;
+    margin: 0 81px 0 0;
+  }
 }
-.add-product__title  {
+
+.add-product__option {
+  font-family: @minor-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: @form-grey--dark;
+  width: 100%;
+  margin-bottom: 15px;
+  border-spacing: 0;
+
+  @media (min-width: @tablet-width) {
     font-size: 16px;
-    line-height: 16px;
-    text-transform: uppercase;
-    color: @special-grey--dark;
+    line-height: 20px;
+    width: 70%;
+    min-width: 235px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40%;
+    margin-bottom: 0;
+    margin-right: 38px;
+  }
 }
-.add-product__option  {}
-.add-product__table  {}
-.add-product__table-cell  {
-    font-family: "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 14px;
-    color: @special-grey;
-    &--quantity {}
-    &--price {}
+
+.add-product__table-cell {
+  padding: 2px 0;
+
+  &--quantity {
+    text-align: left;
+
+    @media (min-width: @tablet-width) {
+      text-align: right;
+    }
+
+    @media (min-width: @desktop-width) {
+      text-align: left;
+    }
+  }
+
+  &--price {
+    text-align: right;
+
+    @media (min-width: @tablet-width) {
+      width: 93px;
+    }
+  }
 }

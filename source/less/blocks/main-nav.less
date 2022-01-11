@@ -1,5 +1,22 @@
 .main-nav {
+  width: auto;
+  min-height: 66px;
+
   @media (min-width: @tablet-width) {
+    display: block;
+    margin: 0;
+  }
+}
+
+.main-nav__list {
+  width: 100%;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 62%;
     min-width: 440px;
   }
@@ -10,23 +27,6 @@
   }
 }
 
-.main-nav__list {
-  text-align: center;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-//burger
-.main-nav__toggle {
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
 //link
 .main-nav__item-link {
   font-weight: 500;
@@ -34,6 +34,93 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @black;
+  position: relative;
   padding-top: 22px;
   padding-bottom: 23px;
+  border-top: 1px solid @form-grey--ligth;
+
+  @media (min-width: @tablet-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+  }
+}
+
+//burger
+.main-nav__toggle {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+// closed menu
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@black, 30%);
+  box-shadow:
+    0 8px 0 0 fade(@black, 30%),
+    0 16px 0 0 fade(@black, 30%);
+}
+
+// opened menu
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@black, 30%);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--opened .main-nav__container {
+    display: block;
+  }
 }

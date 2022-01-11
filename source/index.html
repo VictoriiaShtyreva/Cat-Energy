@@ -8,22 +8,20 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="container">
-        <div class="page-header__container">
-          <a class="page-header__logo" href="index.html">
-            <svg class="page-header__logo-image" width="33" height="38">
-              <use xlink:href="img/sprite.svg#logo-image"></use>
-            </svg>
-          </a>
-          <svg class="page-header__logo-title" width="101" height="18">
-            <use xlink:href="img/sprite.svg#logo-mobile-title"></use>
+      <div class="container page-header__container">
+        <a class="page-header__logo" href="index.html">
+          <svg class="page-header__logo-image" width="33" height="38">
+            <use xlink:href="img/sprite.svg#logo-image"></use>
           </svg>
+        </a>
+        <svg class="page-header__logo-title" width="101" height="18">
+          <use xlink:href="img/sprite.svg#logo-mobile-title"></use>
+        </svg>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        </div>
-        <nav class="main-nav">
           <div class="main-nav__container">
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active"><a class="main-nav__item-link" href="index.html">Главная</a></li>
+              <li class="main-nav__item  main-nav__item--active"><a class="main-nav__item-link" href="index.html">Главная</a></li>
               <li class="main-nav__item"><a class="main-nav__item-link" href="catalog.html">Каталог продукции</a></li>
               <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Подбор программы</a></li>
             </ul>
@@ -43,42 +41,38 @@
           </header>
         </div>
       </section>
-      <section class="programs-list">
-        <div class="container">
-          <div class="programs-list__container">
-            <article class="programs-list__content program">
-              <h3 class="program__title program__title--slim">Похудение</h3>
-              <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="program__link" href="catalog.html">Каталог slim</a>
-            </article>
-            <article  class="programs-list__content program">
-              <h3 class="program__title program__title--pro">Набор массы</h3>
-              <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="program__link" href="catalog.html">Каталог pro</a>
-            </article>
-          </div>
+      <section class="programs-list container">
+        <div class="programs-list__container">
+          <article class="programs-list__content program">
+            <h3 class="program__title program__title--slim">Похудение</h3>
+            <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="program__link" href="catalog.html">Каталог slim</a>
+          </article>
+          <article  class="programs-list__content program">
+            <h3 class="program__title program__title--pro">Набор массы</h3>
+            <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="program__link" href="catalog.html">Каталог pro</a>
+          </article>
         </div>
       </section>
-      <section class="instruction">
-        <div class="container">
-          <div class="instruction__container">
-            <h2 class="visually-hidden">Описание работы функционального питания Кэт энерджи</h2>
-            <h3 class="instruction__title">Как это работает</h3>
-            <ul class="instruction__list grid-instruction">
-              <li class="instruction__item instruction__item--useful grid-instruction__item">
-                <p class="instruction__description">Функциональное питание содержит только полезные питательные вещества.</p>
-              </li>
-              <li class="instruction__item instruction__item--preparation grid-instruction__item">
-                <p class="instruction__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-              </li>
-              <li class="instruction__item instruction__item--food grid-instruction__item">
-                <p class="instruction__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-              </li>
-              <li class="instruction__item instruction__item--changes grid-instruction__item">
-                <p class="instruction__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-             </li>
-            </ul>
-          </div>
+      <section class="instruction container">
+        <div class="instruction__container">
+          <h2 class="visually-hidden">Описание работы функционального питания Кэт энерджи</h2>
+          <h3 class="instruction__title">Как это работает</h3>
+          <ul class="instruction__list grid-instruction">
+            <li class="instruction__item instruction__item--useful grid-instruction__item">
+              <p class="instruction__description">Функциональное питание содержит только полезные питательные вещества.</p>
+            </li>
+            <li class="instruction__item instruction__item--preparation grid-instruction__item">
+              <p class="instruction__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            </li>
+            <li class="instruction__item instruction__item--food grid-instruction__item">
+              <p class="instruction__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
+            </li>
+            <li class="instruction__item instruction__item--changes grid-instruction__item">
+              <p class="instruction__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+           </li>
+          </ul>
         </div>
       </section>
       <section class="preview">
@@ -100,7 +94,7 @@
                   </div>
                 </li>
               </ul>
-              <p class="preview-caption">
+              <p class="preview-caption preview-caption__container">
                 <span class="preview-caption__description">Затраты на питание:</span>
                 <span class="preview-caption__value">15 000 РУБ.</span>
               </p>
@@ -122,13 +116,11 @@
         </div>
       </section>
       <section class="contacts">
-        <div class="container">
-          <div class="contacts__container">
-            <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-            <div class="contacts__text">
-              <p class="contacts__street">ул. Большая Конюшенная, д. 19/8</p>
-              <p class="contacts__city">Санкт-Петербург</p>
-            </div>
+        <div class="container contacts__container">
+          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <div class="contacts__text">
+            <p class="contacts__street">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="contacts__city">Санкт-Петербург</p>
           </div>
         </div>
         <div class="location">
@@ -138,34 +130,32 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="container">
-        <div class="page-footer__content">
-          <div class="page-footer__logo">
-            <a class="page-footer__logo-image" href="index.html">
-              <img class="page-footer__logo-title" src="img/logo-mobile-title.svg" width="128" height="24" alt="Надпись Кэт энерджи.">
-            </a>
-          </div>
-          <div class="page-footer__social social">
-            <ul class="social__list">
-              <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><h3 class="visually-hidden">Мы в Вконтакте</h3></a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><h3 class="visually-hidden">Мы в Инстаграме</h3></a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><h3 class="visually-hidden">Мы в Фейсбуке</h3></a>
-              </li>
-            </ul>
-          </div>
-          <div class="page-footer__copyright copyright">
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <b class="copyright__text">HTML Academy</b>
-              <svg class="copyright__link-icon" width="27" height="34">
-                <use xlink:href="img/sprite.svg#icon-login"></use>
-              </svg>
-            </a>
-          </div>
+      <div class="page-footer__content container">
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-image" href="index.html">
+            <img class="page-footer__logo-title" src="img/logo-mobile-title.svg" width="128" height="24" alt="Надпись Кэт энерджи.">
+          </a>
+        </div>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><h3 class="visually-hidden">Мы в Вконтакте</h3></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><h3 class="visually-hidden">Мы в Инстаграме</h3></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><h3 class="visually-hidden">Мы в Фейсбуке</h3></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <b class="copyright__text">HTML Academy</b>
+            <svg class="copyright__link-icon" width="27" height="34">
+              <use xlink:href="img/sprite.svg#icon-login"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
