@@ -9,7 +9,8 @@
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
-    line-height: 60px;
+    line-height: 1;
+    margin-bottom: 32px;
   }
 }
 
@@ -23,8 +24,68 @@
 .instruction__item {
   width: 100%;
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-wrap: wrap;
+    max-width: 280px;
+    min-height: 230px;
+    background-repeat: no-repeat;
+
+    &--useful {
+      background-image: url("../img/background-icon-1.png");
+      background-size: 71px 227px;
+      background-position: 118px 0;
+    }
+
+    &--preparation {
+      background-image: url("../img/background-icon-2.png");
+      background-size: 113px 229px;
+      background-position: 118px 0;
+    }
+
+    &--food {
+      background-image: url("../img/background-icon-3.png");
+      background-size: 112px 232px;
+      background-position: 118px 0;
+    }
+
+    &--changes {
+      background-image: url("../img/background-icon-4.png");
+      background-size: 121px 227px;
+      background-position: 118px 0;
+    }
+  }
 }
 
 .instruction__description {
-  margin: 0;
+  margin-top: 0;
+  margin-left: 20px;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 201px;
+    margin-left: 0;
+  }
+}
+
+// icon
+.instruction__icon {
+  width: 60px;
+  height: 60px;
+  background-color: @basic-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 31px;
+  }
 }
