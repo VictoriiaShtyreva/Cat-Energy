@@ -1,1 +1,57 @@
-/* stylelint-disable */
+.progress-bar {
+  width: 86px;
+  height: 14px;
+  border: 1px solid @form-grey--ligth;
+  border-radius: 10px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 426px;
+    height: 6px;
+    background-color: @grey;
+  }
+}
+
+.progress-bar__range {
+  display: none;
+}
+
+.progress-bar__range-toggle {
+  width: 50%;
+  height: 6px;
+  margin-top: 4px;
+  margin-left: 6px;
+  border-radius: 10px;
+  background-color: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background-color: @white;
+    outline: @grey solid 1px;
+    border-radius: 50%;
+    top: -250%;
+    left: 45%;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: @basic-green;
+    }
+
+    &:active {
+      outline: @basic-green solid 1px;
+    }
+  }
+}

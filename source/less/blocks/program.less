@@ -1,10 +1,11 @@
 .program {
-  padding: 21px;
+  padding: 30px 33px 16px 20px;
   margin-top: 22px;
   background-color: @basic-grey;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 77px 62px 57px 52px;
+    padding: 77px 316px 57px 52px;
     margin-top: 0;
     margin-bottom: 30px;
   }
@@ -13,9 +14,33 @@
     width: 40%;
     height: auto;
     padding-right: 52px;
-    padding-top: 47px;
+    padding-top: 77px;
     padding-bottom: 55px;
     margin-bottom: 0;
+  }
+}
+
+// image
+.program__icon {
+  position: absolute;
+  top: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 92px;
+    right: 62px;
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 47px;
+    right: inherit;
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -28,6 +53,19 @@
   color: @black;
   margin-top: 10px;
   margin-bottom: 12px;
+  padding-left: 70px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 0;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
 }
 
 .program__description {
@@ -40,14 +78,42 @@
   margin-top: 17px;
   margin-bottom: 0;
   border-bottom: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
 }
 
 .program__link {
-  font-size: 16px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: @black;
   padding-top: 19px;
   padding-bottom: 4px;
   padding-right: 47px;
+  color: @black;
+
+  &--title {
+    font-family: @deafult-font;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+// arrow
+.program__arrow {
+  fill: @black;
+  width: 32px;
+  transform: translateX(-8px);
+  transition: transform 0.4s;
 }
