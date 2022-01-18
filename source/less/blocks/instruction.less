@@ -10,7 +10,7 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 1;
-    margin-bottom: 32px;
+    margin-bottom: 72px;
   }
 }
 
@@ -19,13 +19,15 @@
   font-size: 14px;
   line-height: 18px;
   color: @special-grey;
+  counter-reset: section;
 }
 
 .instruction__item {
   width: 100%;
   margin-bottom: 24px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     flex-wrap: wrap;
@@ -33,28 +35,17 @@
     min-height: 230px;
     background-repeat: no-repeat;
 
-    &--useful {
-      background-image: url("../img/background-icon-1.png");
-      background-size: 71px 227px;
-      background-position: 118px 0;
-    }
-
-    &--preparation {
-      background-image: url("../img/background-icon-2.png");
-      background-size: 113px 229px;
-      background-position: 118px 0;
-    }
-
-    &--food {
-      background-image: url("../img/background-icon-3.png");
-      background-size: 112px 232px;
-      background-position: 118px 0;
-    }
-
-    &--changes {
-      background-image: url("../img/background-icon-4.png");
-      background-size: 121px 227px;
-      background-position: 118px 0;
+    &::after {
+      counter-increment: section;
+      content: counter(section) " ";
+      position: absolute;
+      left: 120px;
+      top: -38px;
+      font-size: 280px;
+      line-height: 1;
+      font-family: @deafult-font;
+      color: @basic-grey;
+      z-index: -1;
     }
   }
 }
@@ -68,7 +59,7 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    max-width: 201px;
+    max-width: 262px;
     margin-left: 0;
   }
 }
@@ -83,9 +74,32 @@
   justify-content: center;
   flex-shrink: 0;
 
+  &--1 {
+    background-image: url("../img/icon-1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--2 {
+    background-image: url("../img/icon-2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--3 {
+    background-image: url("../img/icon-3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--4 {
+    background-image: url("../img/icon-4.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   @media (min-width: @tablet-width) {
     width: 80px;
     height: 80px;
-    margin-bottom: 31px;
   }
 }
