@@ -1,5 +1,9 @@
 .form-head {
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+  }
 }
 
 .form-head__container-title {
@@ -10,6 +14,13 @@
   margin-top: 0;
   padding-top: 27px;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 1;
+    padding-top: 0;
+    margin-bottom: 54px;
+  }
 }
 
 .form-head__container-content {
@@ -18,4 +29,11 @@
   text-transform: uppercase;
   margin-bottom: 39px;
   max-width: 226px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+    max-width: 323px;
+  }
 }

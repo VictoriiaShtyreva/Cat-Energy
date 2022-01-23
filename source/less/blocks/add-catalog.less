@@ -1,5 +1,5 @@
 .add-catalog {
-  padding-top: 29px;
+  padding-top: 25px;
   padding-bottom: 35px;
 }
 
@@ -12,6 +12,20 @@
   width: auto;
   margin-top: 0;
   margin-bottom: 36px;
+  padding-right: 22px;
+  position: relative;
+  background-color: @white;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    z-index: -1;
+    width: 100vw;
+    height: 2px;
+    position: absolute;
+    top: 15px;
+    background-color: @basic-green;
+  }
 }
 
 .add-catalog__list {
@@ -23,7 +37,7 @@
 
   @media (min-width: @desktop-width) {
     width: 100%;
-    min-width: 896px;
+    max-width: 896px;
   }
 }
 
@@ -48,12 +62,15 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    max-height: 200px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
-    width: 30%;
+    max-width: 245px;
+    min-height: 273px;
     margin: 0;
   }
 
@@ -69,13 +86,22 @@
     background-image: url("../img/image1.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
   }
 }
 
 .add-catalog__icon-gift {
   padding-top: 58px;
   margin-bottom: 48px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    padding-left: 0;
+  }
 }
 
 .add-catalog__promo-text {
@@ -85,4 +111,13 @@
   width: 161px;
   margin: 0 auto;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 42px;
+    text-align: center;
+  }
 }

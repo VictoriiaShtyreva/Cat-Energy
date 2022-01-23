@@ -1,11 +1,41 @@
-/* stylelint-disable */
+.copyright {
+  @media (min-width: @tablet-width) {
+    width: 23%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 14.5%;
+  }
+}
+
 .copyright__link {
   color: @special-grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
 }
+
 .copyright__text {
   font-family: @minor-font;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
+}
+
+.copyright__link-icon:hover,
+.copyright__link-icon:focus {
+  fill: @basic-green;
+}
+
+.copyright__link-icon:active {
+  opacity: 0.3;
 }

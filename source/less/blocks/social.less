@@ -1,3 +1,13 @@
+.social {
+  @media (min-width: @tablet-width) {
+    width: 18.2%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 11.6%;
+  }
+}
+
 .social__list {
   display: flex;
   justify-content: center;
@@ -13,8 +23,18 @@
 
 .social__item {
   text-align: center;
+  margin: 0 18px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 14px;
+  }
 }
 
-.social__link {
-  color: @special-grey-2;
+.social__icon:hover,
+.social__icon:focus {
+  fill: @basic-green;
+}
+
+.social__icon:active {
+  opacity: 0.3;
 }

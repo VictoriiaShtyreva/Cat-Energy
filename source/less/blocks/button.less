@@ -39,6 +39,15 @@
     color: @special-grey;
     background-color: @basic-grey;
     padding: 10px 94px;
+
+    &:hover,
+    &:focus {
+      background-color: @basic-gray--dark;
+    }
+
+    &:active {
+      color: @special-grey--active;
+    }
   }
 
   &--send {
@@ -67,5 +76,14 @@
     @media (min-width: @desktop-width) {
       max-width: 244px;
     }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @basic-green--dark;
+  }
+
+  &:active {
+    color: @white--active;
   }
 }
