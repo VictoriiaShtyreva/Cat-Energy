@@ -2,10 +2,6 @@
   @media (min-width: @tablet-width) {
     width: 23%;
   }
-
-  @media (min-width: @desktop-width) {
-    width: 14.5%;
-  }
 }
 
 .copyright__link {
@@ -31,11 +27,15 @@
   }
 }
 
-.copyright__link-icon:hover,
-.copyright__link-icon:focus {
+.copyright__link svg {
+  fill: @special-grey-2;
+}
+
+.copyright__link:hover svg,
+.copyright__link:focus svg {
   fill: @basic-green;
 }
 
-.copyright__link-icon:active {
+.copyright__link:active svg {
   opacity: 0.3;
 }

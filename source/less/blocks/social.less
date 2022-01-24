@@ -4,7 +4,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 11.6%;
+    width: 11%;
   }
 }
 
@@ -30,11 +30,16 @@
   }
 }
 
-.social__icon:hover,
-.social__icon:focus {
+.social__link svg {
+  fill: @special-grey-2;
+}
+
+.social__link:hover svg,
+.social__link:focus svg {
   fill: @basic-green;
 }
 
-.social__icon:active {
+.social__link:active svg {
   opacity: 0.3;
+  fill: @basic-green;
 }

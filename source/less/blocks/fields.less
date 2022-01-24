@@ -181,6 +181,10 @@
       width: 200%;
       top: 42px;
     }
+
+    @media (min-width: @desktop-width) {
+      right: -110px;
+    }
   }
 }
 
@@ -284,6 +288,10 @@
 }
 
 // состояние
+.fields__block-textfield ~ svg {
+  fill: @special-grey--dark;
+}
+
 .fields__block-textfield:hover {
   border: 1px solid @form-grey--ligth;
 }
@@ -292,7 +300,7 @@
   outline: 2px solid @form-grey--dark;
   border: none;
 
-  & + .fields__block-icon {
+  & ~ svg {
     fill: @basic-green;
   }
 }
