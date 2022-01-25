@@ -288,9 +288,6 @@
 }
 
 // состояние
-.fields__block-textfield ~ svg {
-  fill: @special-grey--dark;
-}
 
 .fields__block-textfield:hover {
   border: 1px solid @form-grey--ligth;
@@ -300,7 +297,15 @@
   outline: 2px solid @form-grey--dark;
   border: none;
 
-  & ~ svg {
+  & ~ .fields__block-icon--mail path {
+    stroke: @basic-green;
+  }
+
+  & ~ .fields__block-icon--mail line {
+    stroke: @basic-green;
+  }
+
+  & ~ .fields__block-icon--phone {
     fill: @basic-green;
   }
 }
@@ -308,4 +313,16 @@
 .fields__block-textfield:invalid {
   outline: 2px solid @form-grey--error;
   border: none;
+
+  & ~ .fields__block-icon--mail path {
+    stroke: @form-grey--error;
+  }
+
+  & ~ .fields__block-icon--mail line {
+    stroke: @form-grey--error;
+  }
+
+  & ~ .fields__block-icon--phone {
+    fill: @form-grey--error;
+  }
 }

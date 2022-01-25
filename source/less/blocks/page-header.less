@@ -28,25 +28,31 @@
 }
 
 .page-header__logo {
-  height: 38px;
+  min-height: 38px;
 
   @media (min-width: @tablet-width) {
-    height: 52px;
+    min-height: 52px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 59px;
+    min-height: 59px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
 .page-header__logo-title {
   height: 18px;
+  margin-right: 10px;
 
   @media (min-width: @tablet-width) {
-    height: 19px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 22px;
+    display: none;
   }
 }

@@ -30,16 +30,31 @@
   }
 }
 
-.social__link svg {
-  fill: @special-grey-2;
-}
+.social__icon {
+  &--vkontakte,
+  &--instagram {
+    fill: @special-grey-2;
 
-.social__link:hover svg,
-.social__link:focus svg {
-  fill: @basic-green;
-}
+    &:hover,
+    &:focus {
+      fill: @basic-green;
+    }
 
-.social__link:active svg {
-  opacity: 0.3;
-  fill: @basic-green;
+    &:active {
+      fill: @basic-green;
+      opacity: 0.3;
+    }
+  }
+
+  &--facebook {
+    &:hover path,
+    &:focus path {
+      stroke: @basic-green;
+    }
+
+    &:active path {
+      stroke: @basic-green;
+      opacity: 0.3;
+    }
+  }
 }
