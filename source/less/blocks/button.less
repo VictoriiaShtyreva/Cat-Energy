@@ -35,12 +35,6 @@
     }
   }
 
-  &--product-extra {
-    color: @special-grey;
-    background-color: @basic-grey;
-    padding: 10px 94px;
-  }
-
   &--send {
     width: 100%;
     margin-bottom: 21px;
@@ -67,5 +61,29 @@
     @media (min-width: @desktop-width) {
       max-width: 244px;
     }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @basic-green--dark;
+  }
+
+  &:active {
+    color: @white--active;
+  }
+}
+
+.button--product-extra {
+  color: @special-grey;
+  background-color: @basic-grey;
+  padding: 10px 39px;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-gray--dark;
+  }
+
+  &:active {
+    color: @special-grey--active;
   }
 }

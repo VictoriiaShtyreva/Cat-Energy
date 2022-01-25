@@ -4,6 +4,8 @@
 
 .page-footer__content {
   @media (min-width: @tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 57px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,6 +16,19 @@
   text-align: center;
   padding-top: 39px;
   padding-bottom: 32px;
+
+  @media (min-width: @desktop-width) {
+    width: 11%;
+  }
+}
+
+.page-footer__logo-image:hover,
+.page-footer__logo-image:focus {
+  opacity: 0.6;
+}
+
+.page-footer__logo-image:active {
+  opacity: 0.3;
 }
 
 .page-footer__copyright {

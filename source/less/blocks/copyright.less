@@ -1,11 +1,45 @@
-/* stylelint-disable */
+.copyright {
+  @media (min-width: @tablet-width) {
+    width: 17%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 14%;
+  }
+}
+
 .copyright__link {
   color: @special-grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
 }
+
 .copyright__text {
   font-family: @minor-font;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
+}
+
+.copyright__link svg {
+  fill: @special-grey-2;
+}
+
+.copyright__link:hover svg,
+.copyright__link:focus svg {
+  fill: @basic-green;
+}
+
+.copyright__link:active svg {
+  opacity: 0.3;
 }

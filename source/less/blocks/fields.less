@@ -1,6 +1,7 @@
 .fields {
   @media (min-width: @desktop-width) {
     display: grid;
+    grid-template-columns: 609px 609px;
     grid-template-areas:
       "personal program"
       "contacts contacts"
@@ -14,18 +15,21 @@
   padding: 0;
   margin: 0;
   border: none;
+  position: relative;
 }
 // форма с персональными данными
 .fields__group--personal {
   padding-bottom: 27px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 0;
+    padding-bottom: 72px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 41px;
-    max-width: 569px;
+    margin-bottom: 49px;
+    margin-right: 40px;
+    padding: 0;
+    min-width: 569px;
     grid-area: personal;
   }
 }
@@ -42,17 +46,18 @@
 
   @media (min-width: @tablet-width) {
     border: 1px solid @border;
-    padding-right: 20px;
-    padding-left: 27px;
-    padding-bottom: 12px;
-    margin-left: 0;
-    margin-bottom: 49px;
-    margin-right: 67px;
+    padding-top: 25px;
+    padding-left: 28px;
+    padding-bottom: 25px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 568px;
+    margin-left: 40px;
+    margin-bottom: 49px;
+    padding: 20px;
     grid-area: program;
+    margin-right: 0;
   }
 }
 // общая часть форм
@@ -60,9 +65,20 @@
   display: flex;
   align-items: center;
   margin-bottom: 13px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -82,6 +98,7 @@
 }
 
 .fields__block-textfield {
+  font-family: @deafult-font;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -119,8 +136,56 @@
   }
 }
 
+// иконки
+.fields__block-icon {
+  position: absolute;
+
+  &--mail {
+    top: 16px;
+    right: 16px;
+
+    @media (min-width: @tablet-width) {
+      top: 19px;
+      right: 19px;
+    }
+  }
+
+  &--phone {
+    top: 13px;
+    right: 13px;
+
+    @media (min-width: @tablet-width) {
+      top: 16px;
+      right: 17px;
+    }
+  }
+}
+
+
+// заголовки
 .fields__head {
   padding-top: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    top: 34px;
+    right: -20px;
+    background-color: @basic-green;
+
+    @media (min-width: @tablet-width) {
+      right: -70px;
+      width: 200%;
+      top: 42px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: -110px;
+    }
+  }
 }
 
 .fields__head-title {
@@ -130,9 +195,13 @@
   line-height: 26px;
   color: @black;
   max-width: 205px;
-  padding-right: 24px;
+  padding-right: 22px;
   margin: 0;
   background-color: @white;
+
+  &--contacts {
+    padding-right: 14px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -143,22 +212,23 @@
     padding-right: 40px;
     max-width: none;
   }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 39px;
-  }
 }
 // форма с контактными данными владельца
 .fields__group--contacts {
-  padding-top: 6px;
+  margin-bottom: 25px;
 
   @media (min-width: @desktop-width) {
     grid-area: contacts;
+    margin-bottom: 48px;
   }
 }
 
 .fields__inner {
   margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 76px;
+  }
 
   @media (min-width: @desktop-width) {
     display: flex;
@@ -169,12 +239,17 @@
 
 .fields__inner .fields__block {
   @media (min-width: @desktop-width) {
-    min-width: 569px;
+    min-width: 551px;
   }
 }
+
 // форма с коменнтариями
 .fields__group--comment {
   padding-bottom: 6px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+  }
 
   @media (min-width: @desktop-width) {
     grid-area: comment;
@@ -202,15 +277,52 @@
     line-height: 30px;
     height: 174px;
     padding: 10px 19px;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-width: 1220px;
+    margin-top: 76px;
   }
 }
 // форма с дополнительными возможностями
 .fields__group--add {
   @media (min-width: @desktop-width) {
     grid-area: add;
+  }
+}
+
+// состояние
+
+.fields__block-textfield:hover {
+  border: 1px solid @form-grey--ligth;
+}
+
+.fields__block-textfield:focus {
+  outline: 2px solid @form-grey--dark;
+  border: none;
+
+  & ~ .fields__block-icon--mail path {
+    stroke: @basic-green;
+  }
+
+  & ~ .fields__block-icon--mail line {
+    stroke: @basic-green;
+  }
+
+  & ~ .fields__block-icon--phone {
+    fill: @basic-green;
+  }
+}
+
+.fields__block-textfield:invalid {
+  outline: 2px solid @form-grey--error;
+  border: none;
+
+  & ~ .fields__block-icon--mail path {
+    stroke: @form-grey--error;
+  }
+
+  & ~ .fields__block-icon--mail line {
+    stroke: @form-grey--error;
+  }
+
+  & ~ .fields__block-icon--phone {
+    fill: @form-grey--error;
   }
 }

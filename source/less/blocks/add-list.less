@@ -4,13 +4,20 @@
   text-transform: uppercase;
   color: @black;
   padding-top: 22px;
+  padding-bottom: 20px;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 32px;
+    padding-top: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 57px;
   }
 }
 
@@ -34,10 +41,10 @@
   padding-top: 6px;
   padding-bottom: 6px;
   cursor: pointer;
-}
 
-.add-list__content-input {
-  display: none;
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .add-list__content-label::before {
@@ -49,11 +56,30 @@
   width: 26px;
   height: 26px;
   border: 1px solid @form-grey--ligth;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
-.add-list__input:checked + .add-list__label::before {
-  background-image: url("/source/img/check.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 70%;
+.add-list__content-input {
+  display: none;
+
+  &:checked + .add-list__content-label::before {
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70%;
+  }
+}
+
+// состояния
+.add-list__content-label:hover::before,
+.add-list__content-label:focus::before {
+  border: 1px solid @form-grey--middle;
+}
+
+.add-list__content:disabled {
+  opacity: 0.3;
 }
