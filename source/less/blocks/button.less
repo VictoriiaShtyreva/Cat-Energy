@@ -76,7 +76,15 @@
 .button--product-extra {
   color: @special-grey;
   background-color: @basic-grey;
-  padding: 10px 39px;
+  padding: 10px 15px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 15px;
+  }
 
   &:hover,
   &:focus {

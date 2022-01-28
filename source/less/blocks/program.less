@@ -4,6 +4,31 @@
   background-color: @basic-grey;
   position: relative;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 33px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @basic-green;
+
+    @media (min-width: @tablet-width) {
+      top: 92px;
+      right: 62px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 47px;
+      right: inherit;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+
   @media (min-width: @tablet-width) {
     padding: 77px 316px 57px 52px;
     margin-top: 0;
@@ -23,24 +48,47 @@
 // image
 .program__icon {
   position: absolute;
-  top: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: @basic-green;
+  fill: @black;
+  z-index: 1;
 
-  @media (min-width: @tablet-width) {
-    top: 92px;
-    right: 62px;
-    width: 200px;
-    height: 200px;
+  &--slim {
+    left: 27px;
+
+    @media (min-width: @tablet-width) {
+      right: 89px;
+      left: auto;
+      width: 140px;
+      height: 194px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 69px;
+      right: auto;
+      width: 70px;
+      height: 97px;
+      top: 43px;
+    }
   }
 
-  @media (min-width: @desktop-width) {
-    top: 47px;
-    right: inherit;
-    width: 100px;
-    height: 100px;
+  &--pro {
+    left: 7px;
+    top: 43px;
+
+    @media (min-width: @tablet-width) {
+      right: 30px;
+      top: 131px;
+      left: auto;
+      width: 268px;
+      height: 113px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 34px;
+      width: 134px;
+      height: 56px;
+      right: auto;
+      top: 73px;
+    }
   }
 }
 
@@ -88,9 +136,9 @@
 
 .program__link {
   padding-top: 19px;
-  padding-bottom: 4px;
-  padding-right: 47px;
   color: @black;
+  display: flex;
+  align-items: center;
 
   &--title {
     font-family: @deafult-font;
@@ -98,6 +146,7 @@
     font-size: 16px;
     line-height: 16px;
     text-transform: uppercase;
+    padding-right: 15px;
 
     @media (min-width: @tablet-width) {
       font-size: 20px;
@@ -105,15 +154,24 @@
     }
   }
 
+  &:hover .program__arrow {
+    transform: translateX(0);
+    transition: transform 0.4s;
+  }
+
   &:active {
     opacity: 0.3;
+
+    & + .program__arrow {
+      opacity: 0.3;
+    }
   }
 }
 
 // arrow
 .program__arrow {
   fill: @black;
-  width: 32px;
+  width: 24px;
   transform: translateX(-8px);
   transition: transform 0.4s;
 }

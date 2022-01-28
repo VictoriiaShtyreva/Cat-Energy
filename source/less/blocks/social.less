@@ -30,6 +30,39 @@
   }
 }
 
+.social__icon--vkontakte {
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.social__icon--instagram {
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__icon--facebook {
+  @media (min-width: @tablet-width) {
+    width: 28px;
+    height: 33px;
+  }
+
+  &--facebook {
+    &:hover path,
+    &:focus path {
+      stroke: @basic-green;
+    }
+
+    &:active path {
+      stroke: @basic-green;
+      opacity: 0.3;
+    }
+  }
+}
+
 .social__icon {
   &--vkontakte,
   &--instagram {
@@ -42,18 +75,6 @@
 
     &:active {
       fill: @basic-green;
-      opacity: 0.3;
-    }
-  }
-
-  &--facebook {
-    &:hover path,
-    &:focus path {
-      stroke: @basic-green;
-    }
-
-    &:active path {
-      stroke: @basic-green;
       opacity: 0.3;
     }
   }
