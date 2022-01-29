@@ -141,6 +141,7 @@
   position: absolute;
 
   &--mail {
+    stroke: @black;
     top: 16px;
     right: 16px;
 
@@ -298,11 +299,7 @@
   outline: 2px solid @form-grey--dark;
   border: none;
 
-  & ~ .fields__block-icon--mail path {
-    stroke: @basic-green;
-  }
-
-  & ~ .fields__block-icon--mail line {
+  & ~ .fields__block-icon--mail {
     stroke: @basic-green;
   }
 
@@ -315,11 +312,7 @@
   outline: 2px solid @form-grey--error;
   border: none;
 
-  & ~ .fields__block-icon--mail path {
-    stroke: @form-grey--error;
-  }
-
-  & ~ .fields__block-icon--mail line {
+  & ~ .fields__block-icon--mail {
     stroke: @form-grey--error;
   }
 
