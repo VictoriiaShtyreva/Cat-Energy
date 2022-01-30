@@ -45,21 +45,21 @@
 }
 
 .social__icon--facebook {
+  stroke: @special-grey-2;
+
   @media (min-width: @tablet-width) {
     width: 28px;
     height: 33px;
   }
 
-  &--facebook {
-    &:hover path,
-    &:focus path {
-      stroke: @basic-green;
-    }
+  &:hover,
+  &:focus {
+    stroke: @basic-green;
+  }
 
-    &:active path {
-      stroke: @basic-green;
-      opacity: 0.3;
-    }
+  &:active {
+    stroke: @basic-green;
+    opacity: 0.3;
   }
 }
 
