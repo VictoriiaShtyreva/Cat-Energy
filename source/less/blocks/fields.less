@@ -172,20 +172,21 @@
     content: "";
     position: absolute;
     z-index: -1;
-    width: 100%;
+    width: 100vw;
     height: 3px;
     top: 34px;
     right: -20px;
     background-color: @basic-green;
+    box-sizing: inherit;
 
     @media (min-width: @tablet-width) {
       right: -70px;
-      width: 200%;
+      width: 200vw;
       top: 42px;
     }
 
     @media (min-width: @desktop-width) {
-      right: -110px;
+      right: -145px;
     }
   }
 }

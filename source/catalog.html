@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
-    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <!-- <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
       <symbol viewBox="0 0 101 18" id="logo-mobile-title">
         <g clip-path="url(#clip0_37030_445)">
         <path d="M1.26449 16.5385C0.36955 15.2762 -0.0747041 13.7627 1.02073e-05 12.2308V5.84615C-0.108365 4.29774 0.308071 2.75746 1.18546 1.46154C2.05478 0.461538 3.39829 0 5.37403 0C7.34978 0 8.61425 0.461538 9.40455 1.30769C10.2626 2.37941 10.6846 3.72136 10.59 5.07692V6.61539H6.71754V4.84615C6.74881 4.32289 6.66808 3.799 6.48045 3.30769C6.38016 3.10938 6.2212 2.9448 6.02403 2.83513C5.82686 2.72547 5.60049 2.67572 5.37403 2.69231C4.82082 2.69231 4.42568 2.84615 4.26762 3.23077C4.08883 3.77733 4.00862 4.34988 4.03053 4.92308V13.1538C3.98879 13.71 4.0978 14.267 4.34665 14.7692C4.5047 15.1538 4.89985 15.3077 5.45306 15.3077C6.00627 15.3077 6.32239 15.1538 6.48045 14.7692C6.66013 14.2494 6.74049 13.7019 6.71754 13.1538V11.3077H10.59V12.8462C10.6704 14.2238 10.2508 15.5852 9.40455 16.6923C8.61425 17.6154 7.27075 18.0769 5.37403 18.0769C3.47732 18 2.05478 17.5385 1.26449 16.5385Z" fill="#111111"/>
@@ -72,7 +72,7 @@
       <symbol viewBox="0 0 27 34" id="icon-footer">
         <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/>
       </symbol>
-    </svg>
+    </svg> -->
     <header class="page-header">
       <div class="container page-header__container">
         <a class="page-header__logo" href="index.html">
@@ -84,7 +84,7 @@
           </picture>
         </a>
         <svg class="page-header__logo-title" width="101" height="18">
-          <use xlink:href="#logo-mobile-title"></use>
+          <use xlink:href="img/sprite.svg#logo-mobile-title"></use>
         </svg>
         <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -249,7 +249,7 @@
                       <td class="product-table__content-cell product-table__content-cell--title">Цена</td>
                       <td class="product-table__content-cell product-table__content-cell--value">400 Р.</td>
                     </tr>
-                 </table>
+                  </table>
                 </div>
               </div>
               <a class="button button--product" href="#">Заказать</a>
@@ -315,7 +315,7 @@
             <li class="product__item product__item--add">
               <div class="product__extra">
                 <svg class="product__extra-icon" width="30" height="30" fill="none">
-                  <use xlink:href="#icon-plus"></use>
+                  <use xlink:href="img/sprite.svg#icon-plus"></use>
                 </svg>
                 <h2 class="product__extra-subtitle">Показать еще 100500 товаров</h2>
                 <p class="product__extra-text">На самом деле вкусов гораздо больше!</p>
@@ -373,7 +373,7 @@
             </ul>
             <div class="add-catalog__promo">
               <svg class="add-catalog__icon-gift" width="78" height="80" fill="none">
-                <use xlink:href="#icon-gift"></use>
+                <use xlink:href="img/sprite.svg#icon-gift"></use>
               </svg>
               <p class="add-catalog__promo-text">Закажите все и получите чехол для кота в подарок!</p>
             </div>
@@ -402,7 +402,7 @@
           <a class="page-footer__logo-image" href="index.html">
             <h3 class="visually-hidden">Cat Energy</h3>
             <svg width="128" height="24">
-              <use xlink:href="#logo-footer"></use>
+              <use xlink:href="img/sprite.svg#logo-footer"></use>
             </svg>
           </a>
         </div>
@@ -411,21 +411,21 @@
             <li class="social__item">
               <a class="social__link" href="https://vk.com/htmlacademy"><h3 class="visually-hidden">Мы в Вконтакте</h3>
                 <svg class="social__icon social__icon--vkontakte" width="23" height="16">
-                  <use xlink:href="#icon-vkontakte"></use>
+                  <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://www.instagram.com/htmlacademy"><h3 class="visually-hidden">Мы в Инстаграме</h3>
                 <svg class="social__icon social__icon--instagram" width="16" height="16">
-                  <use xlink:href="#icon-instagram"></use>
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://www.facebook.com/htmlacademy"><h3 class="visually-hidden">Мы в Фейсбуке</h3>
                 <svg class="social__icon social__icon--facebook" width="22" height="22" fill="none">
-                  <use xlink:href="#icon-facebook"></use>
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
@@ -435,7 +435,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <b class="copyright__text">HTML Academy</b>
             <svg class="copyright__link-icon" width="27" height="34">
-              <use xlink:href="#icon-footer"></use>
+              <use xlink:href="img/sprite.svg#icon-footer"></use>
             </svg>
           </a>
         </div>
