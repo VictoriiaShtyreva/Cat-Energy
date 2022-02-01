@@ -7,6 +7,7 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     padding-left: 87px;
     text-align: left;
     min-height: 860px;
@@ -58,8 +59,8 @@
 }
 
 .promo__header {
-  @media (min-width: @tablet-width) {
-    position: relative;
+  @media (min-width: @desktop-width) {
+    margin-left: 40px;
   }
 }
 
@@ -99,21 +100,24 @@
   }
 }
 
-.promo_image {
+.promo__image {
   margin: 0 auto;
+  display: block;
+  margin-bottom: 5px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
     margin: 0 auto;
     right: 0;
-    left: 0;
+    left: -76px;
+    top: 232px;
     z-index: -1;
     width: 709px;
   }
 
   @media (min-width: @desktop-width) {
     top: 0;
-    left: 15%;
+    left: 12%;
     width: 597px;
   }
 }

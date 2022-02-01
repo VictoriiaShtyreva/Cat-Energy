@@ -19,7 +19,7 @@
 }
 // форма с персональными данными
 .fields__group--personal {
-  padding-bottom: 27px;
+  padding-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 72px;
@@ -104,12 +104,15 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: @special-grey;
   padding: 13px 15px;
   border: 1px solid @form-grey;
   outline: 0;
   width: 100%;
   margin-left: 12px;
+
+  &::placeholder {
+    color: @special-grey;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -259,12 +262,12 @@
   }
 }
 
-.fields__textarea {
+.fields__textarea-content {
   font-family: inherit;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
   color: @special-grey;
   border: 1px solid @border;
@@ -276,7 +279,12 @@
   overflow: auto;
   box-sizing: border-box;
 
+  &::placeholder {
+    color: @special-grey;
+  }
+
   @media (min-width: @tablet-width) {
+    font-size: 20px;
     line-height: 30px;
     height: 174px;
     padding: 10px 19px;

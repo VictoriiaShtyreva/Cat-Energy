@@ -10,6 +10,11 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+    margin-left: 40px;
+  }
 }
 
 .page-footer__logo {
@@ -17,8 +22,12 @@
   padding-top: 20px;
   padding-bottom: 25px;
 
+  @media (min-width: @tablet-width) {
+    padding-bottom: 5px;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 11%;
+    padding-bottom: 0;
   }
 }
 
@@ -34,4 +43,8 @@
 .page-footer__copyright {
   padding-top: 22px;
   padding-bottom: 22px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 39px;
+  }
 }
