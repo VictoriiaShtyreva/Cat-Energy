@@ -1,5 +1,5 @@
 .program {
-  padding: 30px 33px 16px 20px;
+  padding: 21px 33px 18px 21px;
   margin-top: 22px;
   background-color: @basic-grey;
   position: relative;
@@ -7,7 +7,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 33px;
+    top: 26px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -30,7 +30,7 @@
 
 
   @media (min-width: @tablet-width) {
-    padding: 77px 316px 57px 52px;
+    padding: 85px 316px 57px 52px;
     margin-top: 0;
     margin-bottom: 30px;
   }
@@ -38,10 +38,16 @@
   @media (min-width: @desktop-width) {
     width: 40%;
     height: auto;
-    padding-right: 52px;
+    padding-right: 15px;
     padding-top: 77px;
-    padding-bottom: 55px;
+    padding-bottom: 58px;
     margin-bottom: 0;
+    margin-top: 45px;
+
+    &--pro {
+      padding-right: 10px;
+      margin-right: 40px;
+    }
   }
 }
 
@@ -71,8 +77,8 @@
   }
 
   &--pro {
-    left: 7px;
-    top: 43px;
+    left: 10px;
+    top: 37px;
 
     @media (min-width: @tablet-width) {
       right: 30px;
@@ -100,7 +106,7 @@
   text-transform: uppercase;
   color: @black;
   margin-top: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 32px;
   padding-left: 70px;
 
   @media (min-width: @tablet-width) {
@@ -108,11 +114,12 @@
     line-height: 36px;
     padding-left: 0;
     margin-bottom: 24px;
+    margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 162px;
-    margin-bottom: 73px;
+    margin-bottom: 82px;
   }
 }
 
@@ -122,7 +129,7 @@
   line-height: 18px;
   color: @special-grey;
   width: 100%;
-  padding-bottom: 21px;
+  padding-bottom: 19px;
   margin-top: 17px;
   margin-bottom: 0;
   border-bottom: 1px solid @border;
@@ -131,40 +138,58 @@
     font-size: 16px;
     line-height: 24px;
     border: none;
+    max-width: 340px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 100%;
   }
 }
 
 .program__link {
-  padding-top: 19px;
+  padding-top: 20px;
   color: @black;
   display: flex;
   align-items: center;
 
-  &--title {
-    font-family: @deafult-font;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 16px;
-    text-transform: uppercase;
-    padding-right: 15px;
-
-    @media (min-width: @tablet-width) {
-      font-size: 20px;
-      line-height: 30px;
-    }
+  @media (min-width: @tablet-width) {
+    padding-top: 35px;
   }
 
-  &:hover .program__arrow {
-    transform: translateX(0);
-    transition: transform 0.4s;
+  @media (min-width: @desktop-width) {
+    padding-top: 12px;
+  }
+}
+
+
+.program__link-title {
+  font-family: @deafult-font;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding-right: 28px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  &:active {
+  @media (min-width: @desktop-width) {
+    padding-right: 37px;
+  }
+}
+
+.program__link-title:hover .program__arrow {
+  transform: translateX(0);
+  transition: transform 0.4s;
+}
+
+.program__link-title:active {
+  opacity: 0.3;
+
+  & + .program__arrow {
     opacity: 0.3;
-
-    & + .program__arrow {
-      opacity: 0.3;
-    }
   }
 }
 

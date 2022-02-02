@@ -1,6 +1,6 @@
 .product {
   box-sizing: border-box;
-  margin-top: 19px;
+  margin-top: 20px;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -13,28 +13,26 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;
     justify-items: center;
+    margin-top: 0;
   }
 }
 
 .product__item {
   margin-bottom: 19px;
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 25px;
   border-bottom: 1px solid @border;
 
   @media (min-width: @tablet-width) {
-    width: 75%;
-    padding-bottom: 39px;
-    padding-left: 36px;
-    padding-right: 36px;
+    width: 100%;
+    padding: 0 39px 40px;
+    box-sizing: border-box;
+    margin-bottom: 6px;
     background-image: linear-gradient(to bottom, transparent 0, transparent 77px, @basic-grey 77px, @basic-grey 100%);
   }
 
   @media (min-width: @desktop-width) {
-    width: 70%;
+    padding: 0 39px 36px;
+    margin-bottom: -10px;
   }
 }
 
@@ -42,7 +40,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 22px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
@@ -93,14 +91,14 @@
   text-transform: uppercase;
   color: @special-grey--dark;
   width: 76px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 24px;
     width: 146px;
     text-align: center;
-    margin: 34px auto 21px;
+    margin: 32px auto 10px;
   }
 }
 
@@ -109,6 +107,7 @@
   font-size: 12px;
   line-height: 16px;
   width: 100%;
+  min-width: 142px;
   border-spacing: 0;
 
   @media (min-width: @tablet-width) {
@@ -120,6 +119,7 @@
 //extra products
 .product__item--add {
   border-bottom: 1px solid @border;
+  margin-top: 30px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -127,7 +127,7 @@
     align-items: center;
     justify-content: flex-end;
     background-image: none;
-    padding: 51px 39px 41px 38px;
+    padding: 67px 39px 41px 38px;
     border: 1px solid @border;
     margin-top: 78px;
   }
@@ -135,6 +135,16 @@
 
 .product__extra {
   text-align: center;
+}
+
+.product__extra-icon {
+  width: 30px;
+  height: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .product__extra-subtitle {
@@ -151,7 +161,7 @@
     font-size: 20px;
     line-height: 22px;
     width: 134px;
-    margin: 49px auto 23px;
+    margin: 29px auto 32px;
   }
 }
 
@@ -160,6 +170,7 @@
   font-size: 12px;
   line-height: 16px;
   margin-bottom: 21px;
+  color: @special-grey;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;

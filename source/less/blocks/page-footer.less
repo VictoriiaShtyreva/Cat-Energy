@@ -1,11 +1,16 @@
 .page-footer {
   background-color: @basic-grey;
+  padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .page-footer__content {
   @media (min-width: @tablet-width) {
-    padding-top: 57px;
-    padding-bottom: 57px;
+    padding-top: 24px;
+    padding-bottom: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,11 +19,15 @@
 
 .page-footer__logo {
   text-align: center;
-  padding-top: 39px;
-  padding-bottom: 32px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 5px;
+  }
 
   @media (min-width: @desktop-width) {
-    width: 11%;
+    padding-bottom: 0;
   }
 }
 

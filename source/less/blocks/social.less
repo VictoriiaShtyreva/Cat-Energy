@@ -18,6 +18,13 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+    margin-top: 5px;
+    justify-content: space-evenly;
+    padding: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
   }
 }
 
@@ -63,19 +70,17 @@
   }
 }
 
-.social__icon {
-  &--vkontakte,
-  &--instagram {
-    fill: @special-grey-2;
+.social__icon--vkontakte,
+.social__icon--instagram {
+  fill: @special-grey-2;
 
-    &:hover,
-    &:focus {
-      fill: @basic-green;
-    }
+  &:hover,
+  &:focus {
+    fill: @basic-green;
+  }
 
-    &:active {
-      fill: @basic-green;
-      opacity: 0.3;
-    }
+  &:active {
+    fill: @basic-green;
+    opacity: 0.3;
   }
 }
