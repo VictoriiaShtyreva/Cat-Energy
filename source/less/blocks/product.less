@@ -23,12 +23,16 @@
   border-bottom: 1px solid @border;
 
   @media (min-width: @tablet-width) {
-    width: 75%;
+    width: 100%;
+    padding: 0 39px 40px;
+    box-sizing: border-box;
+    margin-bottom: 6px;
     background-image: linear-gradient(to bottom, transparent 0, transparent 77px, @basic-grey 77px, @basic-grey 100%);
   }
 
   @media (min-width: @desktop-width) {
-    width: 70%;
+    padding: 0 39px 36px;
+    margin-bottom: -10px;
   }
 }
 

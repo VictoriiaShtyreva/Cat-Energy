@@ -1,11 +1,15 @@
 .page-footer {
   background-color: @basic-grey;
   padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .page-footer__content {
   @media (min-width: @tablet-width) {
-    padding-top: 33px;
+    padding-top: 24px;
     padding-bottom: 56px;
     display: flex;
     align-items: center;
@@ -39,8 +43,4 @@
 .page-footer__copyright {
   padding-top: 22px;
   padding-bottom: 22px;
-
-  @media (min-width: @desktop-width) {
-    padding-right: 39px;
-  }
 }
