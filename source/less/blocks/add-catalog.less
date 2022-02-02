@@ -20,22 +20,25 @@
   width: auto;
   margin-top: 0;
   margin-bottom: 36px;
-  padding-right: 22px;
+  padding-right: 10px;
   position: relative;
   background-color: @white;
   display: inline-block;
-  margin-left: 20px;
 
   &::before {
     content: "";
     z-index: -1;
-    width: 83vw;
-    height: 2px;
+    width: 91vw;
+    height: 3px;
     position: absolute;
-    top: 20px;
+    top: 12px;
     left: 0;
     right: 0;
     background-color: @basic-green;
+
+    @media (min-width: @tablet-width) {
+      top: 20px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -46,7 +49,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 81px;
+    margin-bottom: 80px;
   }
 }
 
@@ -60,16 +63,10 @@
   @media (min-width: @desktop-width) {
     width: 100%;
     max-width: 896px;
-    margin-left: 40px;
   }
 }
 
 .add-catalog__container {
-  @media (min-width: @tablet-width) {
-    margin-right: -20px;
-    margin-left: -20px;
-  }
-
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 70% 30%;
@@ -78,11 +75,9 @@
 }
 
 .add-catalog__promo {
-  width: 100%;
-  min-width: 280px;
+  width: 280px;
   text-align: center;
-  margin-top: 13px;
-  margin-bottom: 46px;
+  margin: 46px auto 46px;
   height: 289px;
   background-color: @background-green;
   position: relative;
@@ -95,6 +90,7 @@
     max-height: 200px;
     margin-top: 52px;
     margin-bottom: 89px;
+    width: 100%;
   }
 
   @media (min-width: @desktop-width) {
