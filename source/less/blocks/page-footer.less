@@ -9,11 +9,15 @@
 
 .page-footer__content {
   @media (min-width: @tablet-width) {
-    padding-top: 24px;
+    padding-top: 15px;
     padding-bottom: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 24px;
   }
 }
 
@@ -41,6 +45,10 @@
 }
 
 .page-footer__copyright {
-  padding-top: 22px;
+  padding-top: 19px;
   padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+  }
 }

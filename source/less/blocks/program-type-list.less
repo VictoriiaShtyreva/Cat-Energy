@@ -18,6 +18,11 @@
 .program-type-list__content-input {
   display: none;
 
+  &:focus + .program-type-list__content-label::before {
+    outline: 2px solid @black;
+    border: 0;
+  }
+
   &:checked + .program-type-list__content-label::after {
     display: block;
   }
@@ -87,6 +92,12 @@
   outline: 1px solid @form-grey--middle;
 }
 
-.program-type-list__content:disabled {
+.program-type-list__content-label:active {
   opacity: 0.3;
+}
+
+.program-type-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }

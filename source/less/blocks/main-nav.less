@@ -1,5 +1,8 @@
 .main-nav {
   width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -22,10 +25,23 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 42%;
-    min-width: 516px;
+    width: 40%;
+    min-width: 480px;
+    justify-content: flex-end;
   }
 }
+
+.main-nav__item {
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 
 //link
 .main-nav__item-link {
@@ -56,7 +72,7 @@
         content: "";
         position: absolute;
         right: 0;
-        bottom: 10px;
+        bottom: 12px;
         left: 0;
         height: 2px;
         background: @basic-green;
