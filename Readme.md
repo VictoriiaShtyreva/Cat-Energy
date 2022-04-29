@@ -1,4 +1,5 @@
-# [Личный проект «Кэт энерджи»] (https://VictoriiaShtyreva.github.io/1867789-cat-energy-24/source/index.html)
+# 
+[Личный проект «Кэт энерджи»] (https://VictoriiaShtyreva.github.io/1867789-cat-energy-24/source/index.html)
 
 * Студент: [Виктория Штырева](https://up.htmlacademy.ru/adaptive/24/user/1867789).
 * Наставник: [Лиза Пак](https://htmlacademy.ru/profile/lizzy).
