@@ -10,10 +10,6 @@
 
 `npm run build` - final assembly of the project.
 
-`npm run deploy` - final assembly of the project and placing it in [GitHub Pages](https://pages.github.com).
-
-`npm run dist` - final assembly of the project and packing it into a zip archive.
-
 `npm test` - running a test for stylistic errors.
 
 
