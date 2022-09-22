@@ -13,6 +13,16 @@ import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
 
+const gulp        = require('gulp');
+const deploy      = require('gulp-gh-pages');
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
 
 // Styles
 
