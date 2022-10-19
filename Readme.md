@@ -1,4 +1,4 @@
-# Personal project Cat Energy for [html academy](https://htmlacademy.ru/study)
+# Personal project [Cat Energy](https://victoriiashtyreva.github.io/Cat-Energy/) for [html academy](https://htmlacademy.ru/study)
 
 * Creator: [Viktoriia Shtyreva](https://github.com/VictoriiaShtyreva)
 
